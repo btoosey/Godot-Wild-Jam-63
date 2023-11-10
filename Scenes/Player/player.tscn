@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ejbe8vq4wsf"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_sfb4b"]
+[ext_resource type="Texture2D" uid="uid://n4uo4v01iths" path="res://icon.svg" id="2_xq2jx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dtc64"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_sfb4b")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_xq2jx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dtc64")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
